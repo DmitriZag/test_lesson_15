@@ -62,10 +62,7 @@ public class RegistrationRemoteTests {
 
         step("Open form", () -> {
             open("/automation-practice-form");
-            SelenideElement bannerRoot = $(".fc-consent-root");
-            if (bannerRoot.isDisplayed()) {
-                bannerRoot.$(byText("Consent")).click();
-            }
+            $(".fc-button-label").click();
            executeJavaScript("$('#fixedban').remove()");
            executeJavaScript("$('footer').remove()");
         });
